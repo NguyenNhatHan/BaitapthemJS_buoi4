@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../capstone_bootstrap"
+		},
+		{
+			"path": "../BaitapJS_Buoi4"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "BaitapthemJs_buoi4",
+		"cSpell.words": [
+			"tinh"
+		]
+	}
+}

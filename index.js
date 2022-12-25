@@ -323,22 +323,28 @@ document.getElementById('btnKetqua5').onclick = function () {
     let khoangcach2 = 0;
     let khoangcach3 = 0;
     let hsxanhat = 0;
+    let hsbangnhau = 0;
     //progress
     khoangcach1 = Math.sqrt(Math.pow(truongX - xhs1, 2) + Math.pow(truongY - yhs1, 2));
     khoangcach2 = Math.sqrt(Math.pow(truongX - xhs2, 2) + Math.pow(truongY - yhs2, 2));
     khoangcach3 = Math.sqrt(Math.pow(truongX - xhs3, 2) + Math.pow(truongY - yhs3, 2));
     if (khoangcach1 > khoangcach2 && khoangcach1 > khoangcach3) {
-        hsxanhat = khoangcach1
         hsxanhat = tenhs1
+        let ketqua4 = "Học sinh xa trường nhất là " + hsxanhat;
+        document.getElementById('ketqua4').innerHTML = ketqua4;
     } else if (khoangcach2 > khoangcach1 && khoangcach2 > khoangcach3) {
-        hsxanhat = khoangcach2
         hsxanhat = tenhs2
-    } else {
-        hsxanhat = khoangcach3
+        let ketqua4 = "Học sinh xa trường nhất là " + hsxanhat;
+        document.getElementById('ketqua4').innerHTML = ketqua4;
+    } else if (khoangcach1 == khoangcach2 && khoangcach1 == khoangcach3) {
+        hsbangnhau = tenhs1 + ", " + tenhs2 + ", " + tenhs3
+        document.getElementById('ketqua5').innerHTML = "Khoảng cách của 3 học sinh " + hsbangnhau + " đều bằng nhau"
+    }
+    else {
         hsxanhat = tenhs3
+        let ketqua4 = "Học sinh xa trường nhất là " + hsxanhat;
+        document.getElementById('ketqua4').innerHTML = ketqua4;
     }
     //output
-    let ketqua4 = "Học sinh xa trường nhất là " + hsxanhat
-    document.getElementById('ketqua4').innerHTML = ketqua4;
 }
 
