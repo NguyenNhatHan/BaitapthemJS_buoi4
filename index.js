@@ -7,6 +7,7 @@ document.getElementById('btnKetqua2').onclick = function () {
     let dayNext = 0;
     let monthNext = 0;
     let yearNext = 0;
+    let loi = 0;
     // progress
     switch (thang) {
         case 1:
@@ -20,14 +21,19 @@ document.getElementById('btnKetqua2').onclick = function () {
                 dayNext = 1;
                 monthNext = thang == 12 ? 1 : thang + 1;
                 yearNext = thang == 12 ? nam + 1 : nam;
+                //output
+                let ketqua = 'Ngày ' + dayNext + " tháng " + monthNext + " năm " + yearNext;
+                document.getElementById('ketqua').innerHTML = ketqua;
             } else if (ngay > 31 || ngay < 1) {
-                dayNext = 0;
-                monthNext = 0;
-                yearNext = 0;
+                loi = "Dữ liệu không hợp lệ"
+                document.getElementById('ketqua').innerHTML = loi;
             } else {
                 dayNext = ngay + 1
                 monthNext = thang;
                 yearNext = nam;
+                //output
+                let ketqua = 'Ngày ' + dayNext + " tháng " + monthNext + " năm " + yearNext;
+                document.getElementById('ketqua').innerHTML = ketqua;
             } break
         case 4:
         case 6:
@@ -37,14 +43,19 @@ document.getElementById('btnKetqua2').onclick = function () {
                 dayNext = 1;
                 monthNext = thang == 12 ? 1 : thang + 1;
                 yearNext = thang == 12 ? nam + 1 : nam;
+                //output
+                let ketqua = 'Ngày ' + dayNext + " tháng " + monthNext + " năm " + yearNext;
+                document.getElementById('ketqua').innerHTML = ketqua;
             } else if (ngay > 30 || ngay < 1) {
-                dayNext = 0;
-                monthNext = 0;
-                yearNext = 0;
+                loi = "Dữ liệu không hợp lệ"
+                document.getElementById('ketqua').innerHTML = loi;
             } else {
                 dayNext = ngay + 1
                 monthNext = thang;
                 yearNext = nam;
+                //output
+                let ketqua = 'Ngày ' + dayNext + " tháng " + monthNext + " năm " + yearNext;
+                document.getElementById('ketqua').innerHTML = ketqua;
             } break
         case 2:
             if (nam % 4 == 0 && nam % 100 != 0) {
@@ -52,35 +63,43 @@ document.getElementById('btnKetqua2').onclick = function () {
                     dayNext = 1;
                     monthNext = 3;
                     yearNext = nam;
+                    //output
+                    let ketqua = 'Ngày ' + dayNext + " tháng " + monthNext + " năm " + yearNext;
+                    document.getElementById('ketqua').innerHTML = ketqua;
                 } else if (ngay > 29 || ngay < 1) {
-                    dayNext = 0;
-                    monthNext = 0;
-                    yearNext = 0;
+                    loi = "Dữ liệu không hợp lệ"
+                    document.getElementById('ketqua').innerHTML = loi;
                 } else {
                     dayNext = ngay + 1
                     monthNext = thang;
                     yearNext = nam
+                    //output
+                    let ketqua = 'Ngày ' + dayNext + " tháng " + monthNext + " năm " + yearNext;
+                    document.getElementById('ketqua').innerHTML = ketqua;
                 }
             } else {
                 if (ngay == 28) {
                     dayNext = 1
                     monthNext = 3
                     yearNext = nam
+                    //output
+                    let ketqua = 'Ngày ' + dayNext + " tháng " + monthNext + " năm " + yearNext;
+                    document.getElementById('ketqua').innerHTML = ketqua;
                 }
                 else if (ngay > 28 || ngay < 1) {
-                    dayNext = 0
-                    monthNext = 0
-                    yearNext = 0
+                    loi = "Dữ liệu không hợp lệ"
+                    document.getElementById('ketqua').innerHTML = loi;
                 } else {
                     dayNext = ngay + 1
                     monthNext = thang
                     yearNext = nam
+                    //output
+                    let ketqua = 'Ngày ' + dayNext + " tháng " + monthNext + " năm " + yearNext;
+                    document.getElementById('ketqua').innerHTML = ketqua;
                 }
             }
     }
-    //output
-    let ketqua = 'Ngày ' + dayNext + " tháng " + monthNext + " năm " + yearNext;
-    document.getElementById('ketqua').innerHTML = ketqua;
+
 
 }
 document.getElementById("btnKetqua").onclick = function () {
@@ -91,6 +110,7 @@ document.getElementById("btnKetqua").onclick = function () {
     let yesterday = 0;
     let lastMonth = 0;
     let lastYear = 0;
+    let loi = 0;
     //progress
     switch (thang) {
         case 1:
@@ -104,14 +124,19 @@ document.getElementById("btnKetqua").onclick = function () {
                 yesterday = 31;
                 lastMonth = thang == 1 ? 12 : thang;
                 lastYear = thang == 1 ? nam - 1 : nam;
+                //output
+                let ketqua = 'Ngày ' + yesterday + " tháng " + lastMonth + " năm " + lastYear;
+                document.getElementById('ketqua').innerHTML = ketqua;
             } else if (ngay > 31 || ngay < 1) {
-                dayNext = 0;
-                monthNext = 0;
-                yearNext = 0;
+                loi = "Dữ liệu không hợp lệ"
+                document.getElementById('ketqua').innerHTML = loi;
             } else {
                 yesterday = ngay - 1
                 lastMonth = thang;
                 lastYear = nam;
+                //output
+                let ketqua = 'Ngày ' + yesterday + " tháng " + lastMonth + " năm " + lastYear;
+                document.getElementById('ketqua').innerHTML = ketqua;
             } break
         case 4:
         case 6:
@@ -121,14 +146,19 @@ document.getElementById("btnKetqua").onclick = function () {
                 yesterday = 30;
                 lastMonth = thang == 1 ? 12 : thang;
                 lastYear = thang == 1 ? nam - 1 : nam;
+                //output
+                let ketqua = 'Ngày ' + yesterday + " tháng " + lastMonth + " năm " + lastYear;
+                document.getElementById('ketqua').innerHTML = ketqua;
             } else if (ngay > 30 || ngay < 1) {
-                dayNext = 0;
-                monthNext = 0;
-                yearNext = 0;
+                loi = "Dữ liệu không hợp lệ"
+                document.getElementById('ketqua').innerHTML = loi;
             } else {
                 yesterday = ngay - 1
                 lastMonth = thang;
                 lastYear = nam;
+                //output
+                let ketqua = 'Ngày ' + yesterday + " tháng " + lastMonth + " năm " + lastYear;
+                document.getElementById('ketqua').innerHTML = ketqua;
             } break
         case 2:
             if (nam % 4 == 0 && nam % 100 != 0) {
@@ -136,35 +166,42 @@ document.getElementById("btnKetqua").onclick = function () {
                     yesterday = 29;
                     lastMonth = 1;
                     lastYear = nam;
+                    //output
+                    let ketqua = 'Ngày ' + yesterday + " tháng " + lastMonth + " năm " + lastYear;
+                    document.getElementById('ketqua').innerHTML = ketqua;
                 } else if (ngay > 29 || ngay < 1) {
-                    yesterday = 0;
-                    lastMonth = 0;
-                    lastYear = 0;
+                    loi = "Dữ liệu không hợp lệ"
+                    document.getElementById('ketqua').innerHTML = loi;
                 } else {
                     yesterday = ngay - 1
                     lastMonth = thang;
                     lastYear = nam
+                    //output
+                    let ketqua = 'Ngày ' + yesterday + " tháng " + lastMonth + " năm " + lastYear;
+                    document.getElementById('ketqua').innerHTML = ketqua;
                 }
             } else {
                 if (ngay == 1) {
                     yesterday = 28
                     lastMonth = 1
                     lastYear = nam
+                    //output
+                    let ketqua = 'Ngày ' + yesterday + " tháng " + lastMonth + " năm " + lastYear;
+                    document.getElementById('ketqua').innerHTML = ketqua;
                 }
                 else if (ngay > 28 || ngay < 1) {
-                    yesterday = 0
-                    lastMonth = 0
-                    lastYear = 0
+                    loi = "Dữ liệu không hợp lệ"
+                    document.getElementById('ketqua').innerHTML = loi;
                 } else {
                     yesterday = ngay - 1
                     lastMonth = thang
                     lastYear = nam
+                    //output
+                    let ketqua = 'Ngày ' + yesterday + " tháng " + lastMonth + " năm " + lastYear;
+                    document.getElementById('ketqua').innerHTML = ketqua;
                 }
             }
     }
-    //output
-    let ketqua = 'Ngày ' + yesterday + " tháng " + lastMonth + " năm " + lastYear;
-    document.getElementById('ketqua').innerHTML = ketqua;
 }
 
 // Bài tập 2
@@ -173,25 +210,28 @@ document.getElementById('btnKetqua3').onclick = function () {
     let month = +document.getElementById('month').value;
     let year = +document.getElementById('year').value;
     let guessDay = 0;
+    let loi = 0;
     //progress
     if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
         guessDay = 31
+        let ketqua2 = 'Tháng ' + month + " Năm " + year + " có " + guessDay + " Ngày";
+        document.getElementById('ketqua2').innerHTML = ketqua2
     } else if (month == 4 || month == 6 || month == 9 || month == 11) {
         guessDay = 30;
     } else if (month == 2) {
         if (year % 4 == 0 && year % 100 != 0) {
             guessDay = 29
+            let ketqua2 = 'Tháng ' + month + " Năm " + year + " có " + guessDay + " Ngày";
+            document.getElementById('ketqua2').innerHTML = ketqua2
         } else {
             guessDay = 28
+            let ketqua2 = 'Tháng ' + month + " Năm " + year + " có " + guessDay + " Ngày";
+            document.getElementById('ketqua2').innerHTML = ketqua2
         }
     } else if (month > 12 || month < 1) {
-        month = 0
-        year = 0
-        guessDay = 0
+        loi = "Dữ liệu không hợp lệ"
+        document.getElementById('ketqua2').innerHTML = loi
     }
-    //out put
-    let ketqua2 = 'Tháng ' + month + " Năm " + year + " có " + guessDay + " Ngày";
-    document.getElementById('ketqua2').innerHTML = ketqua2
 }
 
 // Bài tập 3
@@ -338,13 +378,12 @@ document.getElementById('btnKetqua5').onclick = function () {
         document.getElementById('ketqua4').innerHTML = ketqua4;
     } else if (khoangcach1 == khoangcach2 && khoangcach1 == khoangcach3) {
         hsbangnhau = tenhs1 + ", " + tenhs2 + ", " + tenhs3
-        document.getElementById('ketqua5').innerHTML = "Khoảng cách của 3 học sinh " + hsbangnhau + " đều bằng nhau"
+        document.getElementById('ketqua4').innerHTML = "Khoảng cách của 3 học sinh " + hsbangnhau + " đều bằng nhau"
     }
     else {
         hsxanhat = tenhs3
         let ketqua4 = "Học sinh xa trường nhất là " + hsxanhat;
         document.getElementById('ketqua4').innerHTML = ketqua4;
     }
-    //output
 }
 
